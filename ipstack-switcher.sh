@@ -27,7 +27,7 @@
 set -euo pipefail  # Strict error handling
 
 # Version and metadata
-readonly VERSION="1.0.0"
+readonly SCRIPT_VERSION="1.0.0"
 readonly SCRIPT_NAME="IPStack Switcher"
 readonly GITHUB_REPO="https://github.com/Dev-AminMohebbi/ipstack-switcher"
 
@@ -92,7 +92,7 @@ log() {
 show_banner() {
     clear
     echo -e "${CYAN}╔══════════════════════════════════════════════════════════════╗"
-    echo -e "║  ${BOLD}${WHITE}${GEAR_MARK} IPStack Switcher v${VERSION} - Global Edition${RESET}${CYAN}                ║"
+    echo -e "║  ${BOLD}${WHITE}${GEAR_MARK} IPStack Switcher v${SCRIPT_VERSION} - Global Edition${RESET}${CYAN}                ║"
     echo -e "║  ${GRAY}Cross-distribution IPv4/IPv6 stack management${RESET}${CYAN}              ║"
     echo -e "║                                                              ║"
     echo -e "║  ${YELLOW}System:${RESET}${CYAN} $(uname -s) $(uname -r | cut -d- -f1)${CYAN}                              ║"
@@ -527,7 +527,7 @@ show_system_info() {
 
 # Usage information
 show_usage() {
-    echo -e "${BOLD}${WHITE}IPStack Switcher v${VERSION} - Global Edition${RESET}"
+    echo -e "${BOLD}${WHITE}IPStack Switcher v${SCRIPT_VERSION} - Global Edition${RESET}"
     echo -e "${GRAY}Cross-distribution IPv4/IPv6 stack management tool${RESET}"
     echo
     echo -e "${BOLD}${YELLOW}USAGE:${RESET}"
@@ -558,7 +558,7 @@ show_usage() {
 
 # Version information
 show_version() {
-    echo -e "${BOLD}${WHITE}IPStack Switcher${RESET} ${GREEN}v${VERSION}${RESET}"
+    echo -e "${BOLD}${WHITE}IPStack Switcher${RESET} ${GREEN}v${SCRIPT_VERSION}${RESET}"
     echo -e "${GRAY}Global Edition - Cross-distribution support${RESET}"
     echo
     echo -e "${YELLOW}System:${RESET} ${DISTRO^} ${DISTRO_VERSION} ($(uname -m))"
