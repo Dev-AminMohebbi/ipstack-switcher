@@ -2,7 +2,6 @@
 
 > A powerful, cross-distribution IPv4/IPv6 network stack management tool for Linux systems.
 
-![License](https://img.shields.io/github/license/Dev-AminMohebbi/ipstack-switcher)
 ![Shell](https://img.shields.io/badge/Shell-Bash-blue)
 ![Status](https://img.shields.io/badge/status-active-success)
 ![Platform](https://img.shields.io/badge/platform-Linux-lightgrey)
