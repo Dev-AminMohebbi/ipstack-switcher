@@ -21,9 +21,6 @@
 #   Repository: https://github.com/Dev-AminMohebbi/ipstack-switcher                       
 # =============================================================================================
 
-# --- YOUR SCRIPT STARTS HERE (Unmodified) ---
-
-
 set -euo pipefail  # Strict error handling
 
 # Version and metadata
@@ -574,8 +571,10 @@ show_version() {
 #==============================================================================#
 
 main() {
-    # Initialize system detection
+    # Initialize system detection first
     detect_system
+    
+    # Then check prerequisites
     check_prerequisites
     
     # Parse command line arguments
@@ -620,9 +619,11 @@ main() {
             ;;
     esac
     
-    # Final status message
-    echo -e "\n${GREEN}${CHECK_MARK} Operation completed.${RESET}"
-    echo -e "${GRAY}Some changes may require a system reboot to take full effect.${RESET}"
+    # Final status message for non-interactive modes
+    if [[ $# -gt 0 ]]; then
+        echo -e "\n${GREEN}${CHECK_MARK} Operation completed.${RESET}"
+        echo -e "${GRAY}Some changes may require a system reboot to take full effect.${RESET}"
+    fi
 }
 
 # Trap signals for clean exit
